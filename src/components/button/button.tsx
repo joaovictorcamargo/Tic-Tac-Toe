@@ -1,13 +1,21 @@
-import { View } from "react-native";
+import { View, TouchableOpacityProps, TouchableOpacity } from "react-native";
 import React from "react";
-import { TouchableOpacity } from "react-native-gesture-handler";
 import styles from "./button.styles";
 import { ReactElement } from "react";
 import { Text } from "@components";
-export default function Button(): ReactElement {
+
+type ButtonProps = {
+  title: string;
+} & TouchableOpacityProps;
+
+export default function Button({
+  title,
+  style,
+  ...props
+}: ButtonProps): ReactElement {
   return (
-    <TouchableOpacity style={styles.button}>
-      <Text style={styles.buttonText}>Single Player</Text>
+    <TouchableOpacity {...props} style={[styles.button, style]}>
+      <Text style={styles.buttonText}>{title}</Text>
     </TouchableOpacity>
   );
 }

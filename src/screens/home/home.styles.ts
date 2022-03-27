@@ -13,6 +13,9 @@ const styles = StyleSheet.create({
   buttons: {
     marginTop: 80,
   },
+  button: {
+    marginBottom: 20,
+  },
 });
 
 export default styles;
