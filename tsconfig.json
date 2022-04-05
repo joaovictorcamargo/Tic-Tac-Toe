@@ -4,6 +4,7 @@
     "jsx": "react",
     "strict": true,
     "baseUrl": ".",
+    "allowJs": true,
     "paths": {
       "@screens": ["src/screens"],
       "@components": ["src/components"],
